@@ -44,7 +44,7 @@ public class Main {
             }
 
             if (numberOperation == 3) {
-                if (list.size() > 0) {
+                if (!list.isEmpty()) {
                     System.out.println("Список покупок: ");
                     listOutput(list);
                     System.out.println("Какую хотите удалить? Введите номер или название");
@@ -55,7 +55,7 @@ public class Main {
                     } catch (NumberFormatException e) {
                         System.out.println("Покупка " + removeObject + " удалена, ");
                         list.remove(removeObject);
-                        if (list.size() > 0) {
+                        if (!list.isEmpty()) {
                             System.out.println("список покупок: ");
                             listOutput(list);
                             continue;
@@ -66,7 +66,7 @@ public class Main {
                     }
                     System.out.println("Покупка " + removeObject + " удалена, ");
                     list.remove(numberRemoveObject - 1);
-                    if (list.size() > 0) {
+                    if (!list.isEmpty()) {
                         System.out.println("список покупок: ");
                         listOutput(list);
                         continue;
@@ -80,7 +80,7 @@ public class Main {
             }
 
             if (numberOperation == 4) {
-                if (list.size() > 0) {
+                if (!list.isEmpty()) {
                     System.out.println("Введите текст для поиска: ");
                     String search = sc.next();
                     String item;
